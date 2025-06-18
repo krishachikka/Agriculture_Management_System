@@ -32,7 +32,7 @@ const MyProducts = () => {
                     return;
                 }
 
-                const response = await axios.get('http://localhost:3000/api/products', {
+                const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/products`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,
                     },
