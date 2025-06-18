@@ -26,6 +26,7 @@ app.use(cors({
     methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'],
     credentials: true
 }));
+app.set('trust proxy', 1); // If you're behind a proxy like Render
 
 // Middleware to parse incoming JSON requests
 app.use(express.json());
